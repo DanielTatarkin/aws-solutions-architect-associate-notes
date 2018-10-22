@@ -1,3 +1,5 @@
 Exam Notes
 - Standard Monitoring = 5 minutes
 - Detailed Monitoring = 1 Minute
+
+You have to pay if you want Detailed Monitoring
