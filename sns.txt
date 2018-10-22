@@ -1,0 +1,19 @@
+SNS
+
+- Notification service. Data type: JSON
+- Pub/Sub paradigm
+- PUSH mechanism. Instant
+- Pushes notification to mobile devices
+- Deliver SMS or Email, SQS, or any HTTP endpoint
+- Message stored reduntly across multiple AZ
+- Topic: access point
+- Pay as you go
+-- 0.50 per 1 million request
+-- 0.75 per 100 sms
+-- 0.06 per 100,000 HTTP requests
+-- 2 usd per 100,000 emails
+- Can use different format for different protocols (http/s, email, email json, SQS, application)
+
+Topic	-> 	Suscriber 1 (http)
+	\->		Suscriber 2 (email)
+	\-->	Suscriber 3 (SQS) 
