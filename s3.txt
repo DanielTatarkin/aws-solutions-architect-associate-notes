@@ -63,7 +63,7 @@ S3 Cross Region Replication
 S3 Lifecycle Management
 - Can be used with versioning
 - Can be applied to current and previous versions
-- Transition to IA after 30 days is possible
+- Transition to IA after 30 days is possible, if file is larger than 128k
 - Archive to Glacier after 30 days is possible
 - Can permanently delete after N days
 
@@ -93,19 +93,6 @@ S3 Static Website Hosting
 -- If you want to use www.something.com and something.com, you have to create 2 buckets, and configure redirection from www.something.com to something.com in the properties
 
 Dualstack: support for IPV4 and IPV6
-
-S3 Exam Tips
-- S3 is object-based
-- Files can be 0B to 5TB
-- Unlimited storage
-- Files are stored in Buckets
-- Universal namespace, names must be unique
-- Read after Write consistency for PUTS of new objects
---- Immediately able to read object
-- Eventual Consistency for overwrite PUTS and DELETES (take time to propogate)
---- If you update object and then try to read you may get the old object
-- Writing to S3 returns HTTP200 for successful write
-- Loading files is faster when multipwart upload is enabled
 
 - Storage Tiers
 --- S3 Standard
@@ -166,12 +153,14 @@ S3 Exam Tips
 --- --- --- S3 Manged Keys SSE-S3
 --- --- --- AWS Key Management Service, Manged Keys SSE-KMS
 --- --- --- Server Side Encryption with Customer Provided Keys SSE-C
+
 - Storage Gateways
 --- File Gateway - flat files, directly on S3
 --- Volume Gateway
---- --- Stored Volumes - Entire dataset stored on site, async backed up to S3
+--- --- Stored Volumes - Entire dataset stored on site, async backed up to S3. Stores data as Amazon EBS snapshots in S3
 --- --- Cached Volumes - Entire dataset stored in S3, most recent data stored onsite
 --- Gateway Virtual Tape Library (VTL) - Used for backup and uses popular backup applications like NetBackup, Backup Exec, Veeam, etc.
+-- Network requirements: Port 443, 80 (activation only) , 3260 (iSCSI targets), UPD53 (dns)
 
 - Snowball
 --- Import to S3 or Export from S3
