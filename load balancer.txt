@@ -1,0 +1,15 @@
+Load Balancers
+
+Two types of Load Balancers:
+
+- Application load balancer (http / https level)
+- Classic Network load balancer (TCP))
+
+Can be external (accesible via internet) or internal (balancing backend instances behind a subnet, for example)
+
+Performs health checks
+- Unhealthy threadhold: number of consecutive checks failed
+- Healthy threadhold: number of consecutive OK to consider healthy 
+
+Load balancers only have HOSTNAMES, not IP address. This is because if a AZ goes down, it can move to another without problems 
+ 
