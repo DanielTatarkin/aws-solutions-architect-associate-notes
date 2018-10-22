@@ -3,3 +3,9 @@ Exam Notes
 - Detailed Monitoring = 1 Minute
 
 You have to pay if you want Detailed Monitoring
+
+In Cloudwatch you can
+- Create dashboards
+- Create alarms
+- Create events (state changes for AWS resources for example)
+Logs (agregate, monitor and store logs)
