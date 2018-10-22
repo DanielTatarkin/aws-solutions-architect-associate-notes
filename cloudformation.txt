@@ -1,6 +1,6 @@
 Cloudformation
 
-- Allows to transform hardware into code
+Allows to transform hardware into code
 Easy way to create/manage AWS resources
 Can apply versioning to AWS infraestructure (like code)
 
@@ -18,9 +18,33 @@ Template Elements:
 - Output
 	- Public IP, ELB addresses (up to 60)
 	
+Naming
+	You can assign local names, and they are used partially when creating resources. 
+	Names are not fixed/enforced to avoid conflicts. Some exceptions exists (IE bucket names).
+
+You can install software with a set of bootstrapping scripts.
+
+Include integrations with Chef and Puppet
+
+Supports tagging , EBS volumes are automatically tagged
+
+Once provisioned, you have control of the resources
+	
 Automatic rollback if error is ON by default (everything is deleted if an error occurs)
 Keep in mind you are charged for errors, but usage of Cloudformation is free
 Stacks can wait for app to be provisioned using WaitCondition
 Route53 is supported
-IAM Role creation is also supported 
+IAM Role creation is also supported
+
+Can define deletion policies for resources, when you delete the stack, resouces are not deleted
+
+200 stacks max, can request more 
+
+If you want to hide something from Cloudtrail/Cloudatch, mark the parameter with NOECHO 
  
+ Difference with ElasticBeanstalk?
+ - Cloudformation and Elasticbeanstalk compliment eachother
+ 	Beanstalk deploys and runs app in the cloud, integrated with dev tools, manage life cycle of apps
+ 	Cloudformation is a mechanism to provision AWS resources, template to build the entire infraestructure, including Beanstalk apps
+ 
+  
