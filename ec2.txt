@@ -74,3 +74,8 @@ EBS Volume Types
 Instance Metadata
 - http://169.254.169.254/latest/meta-data/
 
+Status Checks:
+- System Status Checks: underlying layer (TCP, etc, to see if the instances recieves network packages)
+- Instance Status Checks: software and network
+
+Termination protection is OFF by default

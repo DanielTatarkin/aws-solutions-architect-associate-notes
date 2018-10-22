@@ -11,8 +11,13 @@ Snapshots of Root Device Volumes
 - Always in the same AZ as the EC2 instance
 - To move EC2 volume from one AZ/Reg to another, take snap or image of it, copy it to new AZ Region, then create EC2 instance
 
+Encryption
+- To encrypt root volume, you need to create an AMI image of your boot disk first, OR use a third party software to encrypt
+ 
 Voumes Vs Snapshots - Security
 - Snaps of encrypted volumes are encrypted automatically
-- VOlumes restored from encrypted snaps are encrypted automatically
+- Volumes restored from encrypted snaps are encrypted automatically
 - You can share snapshots only if they are unencrypted
 --- Snaps can be shared with other AWS accounts or made public
+
+Default option is to delete volume when instance is terminated
