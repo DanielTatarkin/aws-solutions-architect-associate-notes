@@ -110,3 +110,11 @@ S3 Exam Tips
 --- If you update object and then try to read you may get the old object
 - Writing to S3 returns HTTP200 for successful write
 - Loading files is faster when multipart upload is enabled
+
+
+Route53 exam tips
+- You can only resolve an ELB by going to it's DNS name
+- ELB never has IPv4 address, only DNS names
+- Understand difference between Alias Record and CName Record
+- Given the choice, always choose Alias Record over a CName Record
+- Understand routing policies and their use cases

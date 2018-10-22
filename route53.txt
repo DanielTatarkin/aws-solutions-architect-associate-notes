@@ -1,6 +1,7 @@
 Routing Policies:
 - Simple
 --- default routing policy when you create a new record set. Most commonly used when you have a single resource that performs a given function for your domain (e.g. one web server that serves content for violetfamily.com)
+	can point to a ELB that will later balance the load between N servers, but it's still pointing to a single item
 - Weighted
 --- allows you to split your traffic based on different weights assigned
 - Latency
@@ -9,15 +10,10 @@ Routing Policies:
 --- used when you want to create an active/passive setup (e.g. use primary site in US-EAST-1 and secondary DR Site in US-WEST-1).
 - Geolocation
 
+Aliases can point to:
+- ELB
+- cloudfront
+- S3 buckets
 
-
-
-
-
-
-Exam Notes:
-- You can only resolve an ELB by going to it's DNS name
-- ELB never has IPv4 address, only DNS names
-- Understand difference between Alias Record and CName Record
-- Given the choice, always choose Alias Record over a CName Record
-- Understand routing policies and their use cases
+CNAME: Charged $$$
+ALIASES: Free
