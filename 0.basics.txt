@@ -1,0 +1,9 @@
+AWS BASICS
+
+Region -> Geopgraphical (Brazil, Europe, Asia, etc))
+	-> Availability zone -> Data center
+	
+1 Region -> 1,2 or 3 Availabiliy Zones (AZ)
+It's not in the same phisical space (if a flooding occurs, other data center can still answer)
+
+Edge Locations -> CDN (content delivery network). They add new ones all the times, over 100 so far
