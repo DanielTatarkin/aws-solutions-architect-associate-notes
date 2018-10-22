@@ -1,9 +1,17 @@
 AWS BASICS
 
-Region -> Geopgraphical (Brazil, Europe, Asia, etc))
-	-> Availability zone -> Data center
-	
-1 Region -> 1,2 or 3 Availabiliy Zones (AZ)
-It's not in the same phisical space (if a flooding occurs, other data center can still answer)
+AWS Global Infrastructure
+*You will never be tested on numbers (e.g. number of regions/availability zones)*
 
-Edge Locations -> CDN (content delivery network). They add new ones all the times, over 100 so far
+Region -> Geopgraphical (Brazil, Europe, Asia, etc)). Each region consists of two or more availability zones (AZ). It's not in the same phisical space (if a flooding occurs, other data center can still answer)
+	-> Availability zone -> Data center
+
+North America Regions:
+- US East (Northern Virginia)
+- US East (Ohio) Region
+- US West (Oregon) Region
+- US West (Northern California) Region
+- AWS GovCloud (US-West Region)
+- Canada (Central)
+
+Edge Locations -> CDN (content delivery network). They add new ones all the times, over 100 so far. There are many more Edge Locations than Regions.
