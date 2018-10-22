@@ -8,19 +8,20 @@ S3 - Simple Storage Service, provides developers and IT teams with secure, durab
 --- --- Access Control Lists
 --- --- Torrent
 - Unlimited storage
-- Files can be 0 Bytes to 5 Terrabytes
+- Files can be 0 Bytes to 5 Terabytes
 - Files stored in buckets (basically just folders/logical separation)
 - Bucket names have to be unique globally
 - Successful upload will receive HTTP200 code
 - Read after Write consistency for PUTS of new objects
 - Eventual Consistency for overwrite PUTS and DELETES (can take some time)
 - Built for 99.99% availability
-- Amazon guarantees 99.999999999% durability (unlikely to ever lose a file)
+- Amazon guarantees 99.999999999% durability (unlikely to ever lose a file) (11 9s)
 - Tiered storage available
 - Lifecycle management
 - Versioning
 - Encryption
 - Secure your data using Access Control Lists and Bucket Policies
+- Bucket tags are not inherited to files
 
 
 S3 Storage Tiers
@@ -40,6 +41,7 @@ S3 Charges
 - Storage Management Pricing (tags)
 - Data Transfer Pricing (cross-region replication)
 - Transfer Accelleration - fast transfers over long distances using CloudFront
+- Can configure bucket as Request Pays if you use multiple AWS accounts and multiple buckets that transfer info between them
 
 
 S3 Versioning
@@ -86,8 +88,11 @@ S3 Transfer Accelleration
 
 S3 Static Website Hosting
 - [bucketname].s3-website-[region].amazonaws.com
+- CORS: you can enable cors on the bucket to allow other sites to get the files from the bucket
+- If you want to host a static website in S3, just create a bucket name with the URL (IE, if you want to host something.com, create a bucket name with that name) and create an alias to that bucket. 
+-- If you want to use www.something.com and something.com, you have to create 2 buckets, and configure redirection from www.something.com to something.com in the properties
 
-
+Dualstack: support for IPV4 and IPV6
 
 S3 Exam Tips
 - S3 is object-based
@@ -117,12 +122,14 @@ S3 Exam Tips
 --- Value
 --- Version ID
 --- Metadata
---- Access Control Lists
+--- Subresources
+---- Access Control Lists
+---- Torrent file
 
 - Versioning
 ---  Objected based storage (files only, not OS or db)
----  All versionf of object are stored, writes and deletes
----  Once enabled, versioning cannot be disabled
+---  All version of object are stored, writes and deletes
+---  Once enabled, versioning cannot be disabled, only suspended
 ---  Integrates with Lifecycle rules
 ---  Versioning's MFA Delete capability can be used to provide additional layer of security
 ---  Cross Region Replication, requires versioning on source and destination buckets
@@ -173,7 +180,7 @@ S3 Exam Tips
 --- Snowball Edge
 --- --- 100TB, has compute
 --- Snowmobile
---- --- 100PB, semi-truck
+--- --- 100PB, semi-truck, only available in USA
 
 - S3 Transferion Accelleration
 --- Speed up transfers to S3 using S3 transfer acceleration. Costs extra, great impact for people in distant locations.
