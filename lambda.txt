@@ -4,7 +4,12 @@ Exam Tips
 - Lambda is serverless
 - Know which AWS services are serverless
 - Lambda functions can trigger other lambda functions
+- Lambda is event driven (runs code in response to events)
 - Architecture can get complicated, AWS X-ray helps to debug
-- Lambda cna do things globally
+- Lambda can do things globally
 - Know your triggers
---- API Gateway, Alex Skills Kit, S3, DynamoDB, etc.
+--- API Gateway, Alex Skills Kit, IoT, S3, DynamoDB, Cloudwatch, Cloudfront, DynamoDB, etc.
+- Code supported: JS - Java - Python, C#, C++
+- Pricing: first 1 million hits -> Free. 0.20 USD per million after
+- Duration: can't run more than 15 mins (was recently raised, it was 5 mins before)
+- The more memory/duration you need the function running, the higher the cost
