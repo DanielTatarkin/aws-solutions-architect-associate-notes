@@ -1,0 +1,33 @@
+SWF (Simple WorkFlow)
+
+Worklow system
+
+Worker: program that interacts with WF
+		Get task
+		Process recieved task
+		Return result
+		
+Decider:
+		control coordination tasks
+		Ordering, concurrency, scheduling
+		
+A task is designated once and never duplicated
+
+Domain:
+	Container where your WF runs
+	Format: JSON
+	
+A workflow can run for ONE YEAR (measures in seconds)
+
+Difference between SQS and SWF
+
+SWF:
+	* Task oriented API
+	* Task runs 1 (never duplicated)
+	* Keeps track tasks and events
+	* Human interaction if needed (ie, "Pick item from the storage")
+
+SQS
+	* Message oriented API
+	* Message might be duplicated
+	* Implement manual app tracking
