@@ -1,0 +1,3 @@
+Roles are not tied to specific region (neither are users)
+Can apply roles to running instances
+If you apply a role to an instance, there's no need to configure the Access Keys / Secret keys to get permissions to use AWS Services (Ie, to access an private S3 bucket) --> MORE SECURE
