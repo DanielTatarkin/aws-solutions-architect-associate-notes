@@ -4,14 +4,26 @@ VPC
 - Amazon provides you a default VPC in every region when you create your account
 - Can create hardware VPN between corporate datacenter and your VPC, make AWS your extension
 
+A good way to understand VPC is the following (https://start.jcolemorrison.com/aws-vpc-core-concepts-analogy-guide/)
+* VPC: City
+* Subnets: Postal codes 
+* Route tables: roads
+* Network ACL: Security Gates 
+* Security Groups: Security guards for each building (servers) 
+* NAT Gateway: highway to get in the city 
+* VPC Peering: connection to other cities
+
 What can be done:
-- Launch instances into sugnet of choice
+- Launch instances into subnet of choice
 - Assign custom IP address range to each subnet
 - Configure route tables between subnets
 - Create internet gateway and attach it to our VPC, one per VPC
 - Better security control over AWS resources
 - Instance security groups
 - Subnet Access Control Lists (ACLs)
+
+Route Tables determines if a subnet is REACHEABLE
+Network ACL determines if traffic CAN ENTER a subnet 
 
 Default VPC Vs. Custom VPC
 - Default VPC is user friendly, allows you to immediately deply
@@ -24,13 +36,9 @@ VPC Peering
 - You can peer VPC's with other AWS accounts as well as with other VPC's in same account
 - Peering is in star configuration: 1 central VPC peer with 4 others---no transitive peering
 
-Exam Tips
-- Think of VPC as logical datacenter in AWS
-- Consists of IGW's (or virtual private gateways), route tables, NACL's, Subnets, Security Groups
-- 1 subnet = 1 AZ
-- Security Groups are stateful; NACL's are Stateless
-- NO TRANSITIVE PEERING
-
+- Bastion hosts
+	Bastion hosts are used to security administer EC2 instances via SSH or RDP. Can also be called jump box. More secure than opening all your servers to the world to SSH/RDP
+	
 - NAT Instances
   - When creating a NAT instance, disable source/destination check on the instance
   - NAT instances must be in a public subnet
@@ -55,10 +63,17 @@ Exam Tips
 - Network ACL's
   - VPC automatically comes with default network ACL and by default allows all in/outbound traffic
   - You can create custom network ACL's. By default each network ACL denies all in/outbound traffic
-  - each subnet in VPC must be associated with a network ACL, uses default ACL by default
+  - Each subnet in VPC must be associated with a network ACL, uses default ACL by default
   - You can associate network ACL with multiple subnets, however subnet can only associate with one ACL at a time
   - Adding subnet to a second ACL will automatically remove it from the previous ACL
   - network ACL contains numbered list of rules that is evaluated in order, starting with lowest number
   - network ACL always have separate inbound and outbound rules
   - network ACL's are stateless
   
+- VPC Interface Endpoints
+-- API Gateway, Cloudwatch, Config, Kinesis, SNS, etc.
+
+- VPC Gateway Endpoints
+This is used so the traffic does not go out to the Internet and back in (remains in the private network, faster and more secure)
+-- S3 
+-- DynamoDb. 
