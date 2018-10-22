@@ -1,0 +1,26 @@
+Cloudformation
+
+- Allows to transform hardware into code
+Easy way to create/manage AWS resources
+Can apply versioning to AWS infraestructure (like code)
+
+Template --> Diagram
+
+Stack --> Result of the diagram
+
+Format: JSON or YAML
+
+Template Elements:
+- Required: list of AWS resources
+- Optional:
+	- Version, file format
+	- Template parameters (up to 60)	
+- Output
+	- Public IP, ELB addresses (up to 60)
+	
+Automatic rollback if error is ON by default (everything is deleted if an error occurs)
+Keep in mind you are charged for errors, but usage of Cloudformation is free
+Stacks can wait for app to be provisioned using WaitCondition
+Route53 is supported
+IAM Role creation is also supported 
+ 
