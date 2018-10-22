@@ -14,3 +14,11 @@ Users - End users
 Groups - Collection of users under one set of permissions (Admins, HR, etc.)
 Roles - Create roles and assign them to AWS resources (i.e. giving EC2 instance role for writing to EC2)
 Policies - Document that defines one or more permissions. Apply policies to users, groups, and roles
+
+IAM does not use region concept. 
+
+You can create cross-acount roles (ie, you hire a company to do audit, the user that you provide to the auditor can be cross-account)
+
+Never use your root account for daily base. ALWAYS create new users
+
+Remember: Add user confirmation window (where the security and access key is shown) is only displayed ONCE. If you lose access, you will have to regenerate the keys.
