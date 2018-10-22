@@ -1,0 +1,120 @@
+Main services provided by Amazon. Based on late 2017/early 2018.
+
+Route53: DNS service
+
+EC2: Virtual machines
+
+EC2 Container Service: Virtual machines + docker
+
+Elastik Beanstalk: Deploy apps and don't worry about infraestructure. Good for starting users.
+
+Lambda: Serverless. Upload code, no need to configure any server/virtual machines. Used by Amazon Echo
+
+Lightsail: out of the box cloud. Virtual servers with fixed configs
+
+--- STORAGE ---
+
+S3: Virtual disk in the cloud. Object based storage
+
+Glacier: Archive - low cost, but access is not inmediate
+
+EFS: Elastic file service, mount disks without a specific size, automatically (elastically) grows
+
+Storage Gateway: VM in premise with S3 support.
+
+Cache Gateway: cache information from s3 in premise
+
+--- DATABASES ---
+RDS: Mysql, MariaDB, Microsoft SQL, Oracle, Aurora, etc.
+
+DynamoDB: No relational database (NoSQL database)
+
+Red Shift: Data warehouse. Copy your own data to create reports
+
+Elasticache: Cache (can use two technologies: redis or memcached)
+
+--- MIGRATION ---
+Snowball: Portable disk that Amazon sents you, you fill it and send it back to AMZ, and they import it. Several flavours (depends on how much data you need to move)
+
+DMS: Database Migration Service: migrate database to AWS
+
+SMS: Server migration Service: migrate Virtual Machines to AWS
+
+--- ANALYTICS ---
+Athena: Run SQL queries on S3. CVS or XML. Turn flat files into a database
+
+Elastik Map Reduce (EMR): Big data processing. Large amount of data. Uses HADOP/ Apache Spark in the back
+
+--- SEARCH ---
+ElasticSearch: Uses Lucene. Open source
+
+Cloud Search: Fully Managed by AWS. Same tecnology as ES
+
+Kinesis: Stream and analize stream data. Big data
+
+Sentient Analisis: Social media streams    
+
+Data Pipeline: move data from place to place. Move S3 to DynamoDB, or viceversa
+
+Quicksight: Analize data, create dashboards, etc.
+
+--- SECURITY AND IDENTITY ---
+IAM: Authenticate, permissions, etc.
+
+Inspector: Inspects virtual machines (status, etc)
+
+Certificate Manager: Manage SSL Certificates
+
+Directory Service: Active Directory Management
+
+WAF (Web Application Firewall): App net protection against DDOS, hacking. On top of the Network firewall
+
+Artifacts: Compliante documents
+
+--- MANAGEMENT TOOLS ---
+Cloudwatch: Get information on VM, CPU, memory, etc. Stores different kind of logs
+
+Cloud Formation: Turn servers into code. Templates to build entire networks/servers
+
+Cloud Trail: Audit AWS Resources 
+
+OpWorks: configuration management service, provides instances of Chef and Puppet. Automated deploys
+
+Service Catalog: Manage images (vm) and authorized servers in the org
+
+Trusted Advisor: Automated tips and performance optimizations. Automated scan enviroment for problems/security issues
+
+--- APPLICATION SERVICES ---
+Step functionns: visualize steps inside app/microservices. Serverless orchestration
+
+SWF: simple workflow service. Facilitate task both automated (jobs) and human (IE, pick something from a storage)
+
+API Gateway: Door to AWS services, backend services or your own code, in AWS. Can call Lambda functions, for example
+
+AppStream: Stream desktop apps to users
+
+Elastic Transcoder: video tools. Change format, resize, etc.
+
+--- DEVELOPER TOOLS ---
+Code commit: Store code in the cloud. GIT
+
+Code build: Pay by minute, compile code in different environments
+
+Code deploy: Deploy code to EC2. Automatic building, etc.
+
+Code Pipeline: Keep track ofcode differences between enviroments, build pipeline (IE, trigger compile when commiting code, run unit test, etc)
+
+--- ARTIFICIAL INTELLIGENCE ---
+Polly: Service that transform text into Mp3
+
+Machine Learning: dataset, analize data, predict
+
+Rekognition: Image recognition and processing
+
+--- MESSAGING ---
+SNS: Simple notification service - alert system, via SMS, HTTP endpoint, email, etc.
+
+SQS: Simple Queue Service: message queue
+
+SES: Simple Email Service: SMPT
+ 
