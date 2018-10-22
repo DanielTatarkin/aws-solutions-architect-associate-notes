@@ -1,0 +1,35 @@
+Security Token Service (SKS)
+
+Grants users limited and temporary access to AWS services
+- Federation (tipically Active Directory) -- No need to create IAM accounts. Sigle sign on the AWS console. Combile users from 1 domain with users from another domain
+- Federation with mobile apps - FB, AMZ, Google or other OpenID providers
+- Cross Account Access: users from other AWS accounts
+
+Identity Broker: Service that allows to take identity from A and join it (federate it) to B. Impersonate.
+
+Identity Store: FB, Google, Active Directory, etc, all store the identity.
+
+Identity: the user itself.
+
+-------------
+
+Identity broker needs to be programmed.
+The temp token returned by IAM Policy is valid between 1 to 36 hours
+STS returns 4 values if sucessfull:
+1) access key
+2) secret access key
+3) token
+4) duration
+
+Steps:
+1 - Develop identity broken to communicate with LDAP & AWS
+2 - Identity broker (IB) *ALWAYS* authenticate with LDAP first, then AWS STS
+3 - App gets temporary access to AWS Resources
+
+SAML: Secure Assertive Markup Language
+
+Web Identity Federation with mobile apps: you can auth app using things like FB, you need to code it of course
+
+ARN: Amazon Resource Name
+
+AssumeRoleWithWebIdentity: You need to call this method after auth with FB. After that you can access the AWS resouces.   
