@@ -7,9 +7,9 @@ Volumes & Snapshots
 
 Snapshots of Root Device Volumes
 - Can create AMI's from Volumes and Snapshots
-- Can change volume sizes on the fly, including size and storage type
-- Always in the same AZ as the EC2 instance
-- To move EC2 volume from one AZ/Reg to another, take snap or image of it, copy it to new AZ Region, then create EC2 instance
+- Can change volume sizes on the fly, including size and storage type. If you change a Volume on the fly, you have to wait 6 hours to change it again. Can't change volume type of Magnetic Std HD
+- Volumes MUST BE in the same AZ as the EC2 instance
+- If you need to restore/move a EBS Volume to another AZ, you need to create a snapshot of the volume, and create a new volume based on that snapshot, in the other AZ
 
 Encryption
 - To encrypt root volume, you need to create an AMI image of your boot disk first, OR use a third party software to encrypt
@@ -20,4 +20,6 @@ Voumes Vs Snapshots - Security
 - You can share snapshots only if they are unencrypted
 --- Snaps can be shared with other AWS accounts or made public
 
-Default option is to delete volume when instance is terminated
+Default option is to delete volume when instance is terminated. Can be turned off in EC2 settings
+
+EBS Volumes only scale up; can't shrink in size
