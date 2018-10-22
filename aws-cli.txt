@@ -1,0 +1,6 @@
+AWS CLI
+
+Command line to configure AWS
+
+You don't use your console user and password, you use the security and access key that was provided when you added the IAM User
+If you lost this values, you have to re-generate them, it's only show after the user is added. 
