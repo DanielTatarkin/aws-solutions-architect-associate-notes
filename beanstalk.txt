@@ -1,0 +1,23 @@
+Beanstalk
+
+Deploy, monitor and scale app quickly
+Hightly abstract focus towards infraestructure
+Simplify infra management, uses GUI to configure things. Good for people with few AWS experience
+Uses Cloudformation in the background. 
+Can be used for Workers/Jobs
+
+Preconfigured Instance support:
+- NodeJS, Python, PHP, Ruby, Tomcat, .NET (Win IIS), JAva, Go, Packet
+- Docker images
+- Generic docker
+
+Can have multiple versions of your app
+Can be split into tiers (Web / App / DB tier / Front end / Backend, etc)
+You can update the configs after created
+
+Updates can be
+* 1 instance at a time
+* % of instances
+* Immutable (launches all apps from 0 again)
+
+If Beanstalk creates your RDS, will be deleted if/when you delete the EBS instance 
