@@ -1,0 +1,15 @@
+ECS (Elastic Container Service)
+
+- ECS: Elastic Container Service
+- ECR: Elastic Container Registry 
+- Task definition: blueprint 
+- Service: Launches and maintains copies of tasks definitions
+- Cluster: Where tasks runs. Set of containers running ECS Service
+- Task: instaces of a task definition
+
+
+ECS Cluster
+- Container instance	\        - Task
+                        Service	/- Task
+- Container instance    /       \- Task
+		 
