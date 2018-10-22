@@ -1,0 +1,17 @@
+Shared Responsability:
+
+AWS is responsible for:
+- Base hypervision
+- Zones
+- Network
+- Region
+- Operative system and patches in RDS databases
+- etc 
+
+YOU are responsible for:
+- Encryption
+- Operative system in your EC2 instances
+- Firewalls
+- Customer data
+- etc.
+
