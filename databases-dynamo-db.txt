@@ -12,4 +12,9 @@ DynamoDB Pricing
   - Write Throughput $0.0065 per hour for every 10 units
   - Read Throughput $0.0065 per hour for every 50 units
 - Storage Costs
+  - First 25 GB --> Free
   - $0.25GB/month
+- Free tier: 25 units read / 25 units write
+
+DynamoDB Streams
+- Capture changes to DynamoDB for 24 hours. Audit trail like (Add, change (before and after), delete). Use LAMBDA if you want to store the data more than 24 hrs
