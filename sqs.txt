@@ -1,0 +1,16 @@
+SQS
+
+- Message queue system. Message retained up to 14 days
+- 256K of text. Billed at 64K chunks
+- Does NOT guarantee first in, first out. If you need that, use a FIFO SQS queue
+- SQS pulls information
+- Supports auto scalling
+- Visibility timeout window: 12 hours max, default is 30 secs
+- "At least once" -- each message is delivered at least once but maybe more. Keep that in mind
+- First million SQS hits: free. 0.50 USD per million, per month, after that
+- Single request can have from 1 to 10 messages.
+
+* Change visibility timeout with the "ChangeMessageVisibility" method
+* Enable LONG POLLING (20 secs) to wait for a message to become available. Raise an event as soon as a message arrives, good for saving money/requests.
+* Has SNS integration, SQS subscribes to SNS topic. When SNS msg arrives, distribute msg to suscribed SQS queues. 1 SNS -> N SQS
+ 
