@@ -1,0 +1,17 @@
+AutoScalling
+
+Launch configuration on Autoscalling group -> Choose AMI
+Can't change the AMI ID, it's chosen on creation
+
+Grace period: time that takes an instance to warm up. Will starts the checks after this period.
+
+You can find load logs related to autoscalling in
+- Cloudwatch (metrics)
+- Access logs
+- Request tracing
+- Cloud trail logs
+
+How to register a LB group?
+- Instance Id
+- IP Address of the instance
+
