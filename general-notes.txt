@@ -139,3 +139,8 @@ Load balancer tips
 - Healthcecks instance by talking to it
 - ELB'as have their own DNS name
 - Read FAQ
+
+Exam Tips
+- ELB do not have pre-defined IPv4 addresses, must resolve using DNS name
+- Understand the difference between Alias Record and CName Record
+- Given the choice, always choose an Alias Record over CName

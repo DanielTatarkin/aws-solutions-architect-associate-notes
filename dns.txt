@@ -23,7 +23,3 @@ Alias Record
 - works like CName record in that you can map one DNS name to another
 - CName can't be used for naked domain names, can't have CName for violetfamily.com, it must be either A Record or Alias
 
-Exam Tips
-- ELB do not have pre-defined IPv4 addresses, must resolve using DNS name
-- Understand the difference between Alias Record and CName Record
-- Given the choice, always choose an Alias Record over CName
