@@ -15,3 +15,15 @@ How to register a LB group?
 - Instance Id
 - IP Address of the instance
 
+3 ways to scale the servers
+- Manual Scalling
+- Dynamic scalling
+-- In Target Tracking Scalling, you select a metric and set a target value, and EC2 Autoscalling sets the Cloudwatch Alarms to trigger the scalling based on the metric that you set (or as close as possible)
+-- Step scaling allows you to "step up" the number of servers (IE, add 2, add another 2, add another 2, etc), depending on the alarm breach
+-- Simple scaling increases the current capacity of the group based on a single scaling adjustement. If you can, use step scaling even if you have a single metric.
+- Scheduled scalling
+-- You can predict the load changes and how long you need it to run (IE, add 2 more servers between 9am and 12pm from Monday to Friday)
+
+
+
+
