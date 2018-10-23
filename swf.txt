@@ -2,7 +2,11 @@ SWF (Simple WorkFlow)
 
 Worklow system
 
-Worker: program that interacts with WF
+Actor:
+  		application to start/initiate workflow
+  			could be website or mobile app, for example
+
+Worker: program/person that interacts with WF
 		Get task
 		Process recieved task
 		Return result
@@ -15,6 +19,7 @@ A task is designated once and never duplicated
 
 Domain:
 	Container where your WF runs
+	Isolate set of types, executions, and task lists from others in same account
 	Format: JSON
 	
 A workflow can run for ONE YEAR (measures in seconds)
