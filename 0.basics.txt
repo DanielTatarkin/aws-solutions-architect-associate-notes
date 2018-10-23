@@ -3,8 +3,9 @@ AWS BASICS
 AWS Global Infrastructure
 *You will never be tested on numbers (e.g. number of regions/availability zones)*
 
-Region -> Geopgraphical (Brazil, Europe, Asia, etc)). Each region consists of two or more availability zones (AZ). It's not in the same phisical space (if a flooding occurs, other data center can still answer)
-	-> Availability zone -> Data center
+Region 
+	-> Geographical (Brazil, Europe, Asia, etc)). Each region consists of two or more availability zones (AZ). It's not in the same phisical space (if a flooding occurs, other data center can still answer)
+Availability zone -> Data center
 
 North America Regions:
 - US East (Northern Virginia)
