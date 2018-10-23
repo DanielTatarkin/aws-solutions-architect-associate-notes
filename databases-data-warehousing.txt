@@ -1,4 +1,7 @@
 Redshift
+* Datawarehousing
+* Column Data. Agregation
+
 - Single Node (160GB)
 - Multi-Node
   - Leader Node, manages client connections and receives queries
@@ -18,3 +21,11 @@ Encryption
 - Encrypted in transit using SSL
 - Encrypted at rest using AES-256
 - Redshift takes care of key management
+
+Availability:
+- SINGLE AZ
+- Can restore snapshots to other AZ
+- Enable Cross-Region snapshot for recovery
+
+VPC:
+Turn on Enhaced VPC routing for VPC endpoints (So data doesn't leave your own VPC)
