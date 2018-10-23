@@ -35,6 +35,7 @@ VPC Peering
 - Instances behave as if they were on the same private network
 - You can peer VPC's with other AWS accounts as well as with other VPC's in same account
 - Peering is in star configuration: 1 central VPC peer with 4 others---no transitive peering
+- Use C5 or M5 instances for VPC peering
 
 - Bastion hosts
 	Bastion hosts are used to security administer EC2 instances via SSH or RDP. Can also be called jump box. More secure than opening all your servers to the world to SSH/RDP
