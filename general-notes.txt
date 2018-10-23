@@ -125,6 +125,7 @@ VPC exam tips
 - 1 subnet = 1 AZ
 - Security Groups are stateful; NACL's are Stateless
 - NO TRANSITIVE PEERING
+- If you need to access resources from another AWS account, you need to perform a VPC peering between both accounts. 
 
 
 Load balancer tips
