@@ -60,6 +60,15 @@ VPC Peering
   - Remember to update route tables and point to NAT Gateways
   - No need to disable source/destination checks
   - More secure than a NAT instance
+  
+Difference between NAT Gateway and Internet Gateway
+* Both are highly available architectures 
+* Both are used to enable instances in a private subnet to connect to the internet or other AWS services
+* An Internet Gateway (IGW) allows resources within your VPC to access the internet, **and vice versa**. 
+	* In order for this to happen, there needs to be a routing table entry allowing a subnet to access the IGW.
+* NAT Gateway is only from instance to internet (you can download things from the EC2, but internet can't access the server).  
+	* The internet at large cannot get through your NAT to your private resources unless you explicitly allow it.
+* Nat Gateway can only scale up to 45GB. Keep in mind if bandwidth is an issue.
 
 - Network ACL's
   - VPC automatically comes with default network ACL and by default allows all in/outbound traffic
