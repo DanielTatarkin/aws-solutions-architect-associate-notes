@@ -4,6 +4,12 @@ Elastic File System (EFS) - file storage service for EC2 instances.
 - can scale up to petabytes
 - supports thousands of concurrent NFS connections
 - multiple EC2 can point to the same EFS
-- data is stored across multiple AZ's within a region
+- data is stored across multiple AZ's within a region. 
 - read after write consistency
 - can restrict permission to file level or directory level
+- can't mount an EFS in multiples VPC; only one at a time
+- uses port 2049 (NFS)
+-- file system and VPC must be in the same REGION 
+- Two types:
+-- General purpose: low latency
+-- Max IO: higher latency, but useful for big data
