@@ -1,0 +1,4 @@
+Cloudtrail is used to log all the API calls made internally on AWS, mostly for audit
+Since all the settings you change via the console are actually API calls made to the internal AWS API, if you enable Cloudtrail you can get all the information about everything that was done via the console or via specific API calls.
+
+You can turn on a trail across all regions for your AWS account. Cloudtrail will deliver log files from all regions to a S3 bucket and an optional Cloudwatch log group you specify. 
