@@ -10,5 +10,5 @@ API Gateway
 
 Cross-Origin Resource Sharing (CORS)
 - server on other end can relax same-origin policy
-- mechanism that allows restricted resources on web apge to be from another domain
+- mechanism that allows restricted resources on web page to be from another domain
 
