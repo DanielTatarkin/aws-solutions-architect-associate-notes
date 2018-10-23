@@ -3,7 +3,7 @@ SNS
 - Notification service. Data type: JSON
 - Pub/Sub paradigm
 - PUSH mechanism. Instant
-- Pushes notification to mobile devices
+- Push notification
 - Deliver SMS or Email, SQS, or any HTTP endpoint
 - Message stored reduntly across multiple AZ
 - Topic: access point
@@ -23,3 +23,7 @@ Topic	-> 	Suscriber 1 (http)
 	\-->	Suscriber 3 (SQS) 
 	
 You can apply a filter policy in a topic suscription (IE, only send critical errors to the managers)
+
+  SNS Vs SQS
+  - SNS is push
+  - SQS is poll
