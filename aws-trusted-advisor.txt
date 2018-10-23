@@ -1,0 +1,7 @@
+AWS Trusted Advisor
+
+Application that learns from existing AWS customers
+Inspects AWS environment and makes recomendations for 
++ Saving money
++ Improve performance
++ Close security gaps
