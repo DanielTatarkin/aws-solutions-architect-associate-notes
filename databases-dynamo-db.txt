@@ -6,6 +6,7 @@ DynamoDB
   - Consistency across all copies of data is uaully reached within a second. Repeating read after short time will return updated data (best read performance)
 - Strongly Consistent Reads
   - Returns a result that reflects all writes that received a successful response prior to the read
+- Autoscalling supported (% target utilization, min/max)
 
 DynamoDB Pricing
 - Provisioned Throughput Capacity
@@ -18,3 +19,32 @@ DynamoDB Pricing
 
 DynamoDB Streams
 - Capture changes to DynamoDB for 24 hours. Audit trail like (Add, change (before and after), delete). Use LAMBDA if you want to store the data more than 24 hrs
+
+Max size of each item with attributes: 400KB
+BatchWriteItem: 25 items, 16MB
+BatchGetItem: 100 items, 16MB
+Scan: 
+	Eventual or consistency, add parameter ConsistentRead
+	Iterator: returns 1MB and LastEvaluatedKey (to paginate)
+	
+Data types:
+	Number, string, binary, boolean, NULL
+	JSON: stored as document, can create keys and filter by attribute, can update a sub-element, can use document SDK as wrapper (JS)
+
+Indexes:
+Global Secondary Index:
+	Can add up to 5 per table
+Local Secondary Index 
+	Can add up to 5 per table, AT CREATION (can't add them later)
+	10GB PER PARTITION
+	
+Security
+- Fine granual access control allows users in IAM to access/deny information (table, items or even attributes)
+
+Reserved capacity can be bought at discounted price. Limited to a single region.
+
+Triggers are supported (uses DynamoDB w/Lambda)
+
+Can specify TTL on tables. Needs to have a timestamp
+
+DAX: In memory cache (in SDK Node.js & Java)
