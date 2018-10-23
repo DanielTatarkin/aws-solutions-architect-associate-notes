@@ -1,0 +1,9 @@
+AWS Config
+
+Detailed view of configuration resouces
+
++ Evaluate config with desired settings
++ Get snapshots of current config in AWS account
++ Retrieve historical configurations
++ Recieve a notification when resources are created, modified or deleted
++ View relationshops between resources
