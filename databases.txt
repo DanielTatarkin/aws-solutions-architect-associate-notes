@@ -1,4 +1,6 @@
 AWS Database Types
+Maximun size: 16 TB. If larger, consider Redshift
+
 RDS - OTLP (Online Transaction Processing)
   - SQL Server
   - Oracle
@@ -55,7 +57,9 @@ Multi-AZ
 
 Read Replicas
 - Used for scaling, performance gains
-- You can have up to five Read Replicas
+- You can have up to 5 Read Replicas
+- You can have replicas of replicas (higher latency)
+- Can be in a different region
 
 Aurora scaling
 - 2 copies of data in each AZ, 3 AZ's minimunm (total of 6 copies)
@@ -90,3 +94,10 @@ Elasticache
   - Multi-AZ NOT available
 - Redis
   - Multi-AZ available
+  
+Two types of backup:
+- Automated -> retention period: between 1 and 35 days
+- Database snapshots
+	Stored in S3. Not deleted when the RDS instance is deleted
+
+Encryption at rest: KMS. Can't enable encryption on existing DB. Must perform a copy and enable the encryption on the restored copy.
