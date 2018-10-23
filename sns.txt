@@ -12,8 +12,14 @@ SNS
 -- 0.75 per 100 sms
 -- 0.06 per 100,000 HTTP requests
 -- 2 usd per 100,000 emails
-- Can use different format for different protocols (http/s, email, email json, SQS, application)
+- Can use different format for different protocols (http/s, email, email json, SQS, lambda)
+- Each message contains:
+	-- Name
+	-- Type
+	-- Value
 
 Topic	-> 	Suscriber 1 (http)
 	\->		Suscriber 2 (email)
 	\-->	Suscriber 3 (SQS) 
+	
+You can apply a filter policy in a topic suscription (IE, only send critical errors to the managers)
